@@ -1,0 +1,27 @@
+{
+  "name": "cra-template-zerodev",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript",
+    "zerodev"
+  ],
+  "description": "The base ZeroDev template for Create React App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zerodevapp/cra-template-zerodev.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "bugs": {
+    "url": "https://github.com/zerodevapp/cra-template-zerodev/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
