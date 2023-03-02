@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { ConnectButton } from 'zerokit';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 function App() {
   return (

@@ -10,8 +10,9 @@
       "@types/react-dom": "^18.0.0",
       "typescript": "^4.4.2",
       "web-vitals": "^2.1.0",
-      "wagmi": "^0.9.6",
-      "zerokit": "^1.1.10"
+      "wagmi": "^0.11.7",
+      "@zerodevapp/wagmi": "1.0.4",
+      "@rainbow-me/rainbowkit": "^0.11.0"
     },
     "devDependencies": {
       "assert": "^2.0.0",
