@@ -13,10 +13,13 @@ import {
   enhanceWalletWithAAConnector
 } from '@zerodevapp/wagmi/rainbowkit'
 import {
-  getDefaultWallets,
   RainbowKitProvider,
   connectorsForWallets
 } from '@rainbow-me/rainbowkit';
+import {
+  metaMaskWallet,
+  walletConnectWallet,
+} from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { polygonMumbai } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
@@ -31,11 +34,6 @@ const { chains, provider } = configureChains(
     publicProvider()
   ]
 );
-
-const { wallets } = getDefaultWallets({
-  appName: 'My RainbowKit App',
-  chains
-});
 
 // YOUR ZERODEV PROJECT ID
 const projectId = 'b5486fa4-e3d9-450b-8428-646e757c10f6'
@@ -54,12 +52,15 @@ const connectors = connectorsForWallets([
   },
   {
     groupName: 'AA Wallets',
-    wallets: wallets[0].wallets.map(wallet => enhanceWalletWithAAConnector(wallet, { projectId }))
+    wallets: [
+      enhanceWalletWithAAConnector(metaMaskWallet({ chains }), { projectId }),
+      enhanceWalletWithAAConnector(walletConnectWallet({ chains }), { projectId }),
+    ]
   },
 ])
 
 const wagmiClient = createClient({
-  autoConnect: true,
+  autoConnect: false,
   connectors,
   provider
 })
