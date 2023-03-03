@@ -11,7 +11,7 @@
       "typescript": "^4.4.2",
       "web-vitals": "^2.1.0",
       "wagmi": "^0.11.7",
-      "@zerodevapp/wagmi": "1.0.4",
+      "@zerodevapp/wagmi": "^1.0.5",
       "@rainbow-me/rainbowkit": "^0.11.0"
     },
     "devDependencies": {
